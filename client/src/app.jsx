@@ -5,6 +5,7 @@ import Slider from "./Slider.jsx";
 import ColorSelector from './ColorSelector.jsx'
 
 
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -37,14 +38,13 @@ class App extends React.Component {
     })
   }
 
-  handleClick(e){
-    e.preventDefault();
+  async handleClick(e){
     var color = e.target.id
-
-    this.setState({colorGroup: color})
+    await this.setState({colorGroup: color})
     this.forceUpdate();
 
     console.log('NEW STATE: ', this.state)
+
   }
 
   render() {
@@ -57,6 +57,7 @@ class App extends React.Component {
     return (
       <div>
         <Slider images={images} colorGroup={this.state.colorGroup}/>
+
         <ColorSelector colors={this.state.colorsAvailable} currColor={this.state.colorGroup} handleClick={this.handleClick}/>
       </div>
     );

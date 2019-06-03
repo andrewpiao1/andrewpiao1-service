@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 
 const Swatch = styled.div`
-
   display: inline-block;
   height: 40px;
   width: 40px;
@@ -13,7 +12,6 @@ const Swatch = styled.div`
   cursor: pointer;
   border: 3px solid grey;
 `
-
 
 const Text = styled.span`
   font-size: 24px;
