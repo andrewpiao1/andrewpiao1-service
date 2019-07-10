@@ -3,7 +3,9 @@ const app = express();
 const PORT = 3000;
 const Product = require('../database/models.js')
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
+app.use(cors());
 app.use(express.static(__dirname + '/../client/public'))
 
 app.use(bodyParser.urlencoded({

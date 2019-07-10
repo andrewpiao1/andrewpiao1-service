@@ -33,8 +33,8 @@ class App extends React.Component {
         this.allImages = allImages
 
         this.setState({colorGroup, colorsAvailable, currImages: allImages[colorGroup]})
-        console.log('ALL IMAGES: ',  this.allImages)
-        console.log('STATE: ', this.state)
+        // console.log('ALL IMAGES: ',  this.allImages)
+        // console.log('STATE: ', this.state)
     })
   }
 
@@ -44,7 +44,6 @@ class App extends React.Component {
     this.forceUpdate();
 
     console.log('NEW STATE: ', this.state)
-
   }
 
   render() {
